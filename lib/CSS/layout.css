@@ -1,0 +1,16 @@
+    body{
+        margin: 0 auto;
+    }
+
+    .page-title{
+        position: absolute;
+        top: 35%;
+        left: 90px;
+        transform: translate(-10px, 0);
+    }
+    .corp-url{
+        position: absolute;
+        top: 0; 
+        right: 0;
+        transform: translate(0, -10px);   
+    }

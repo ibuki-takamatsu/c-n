@@ -1,0 +1,9 @@
+
+   /* ▼チェックが入っているラジオボタンに対応するタブの中身を表示する */
+   #tabcheck1:checked ~ #tabcontent1 { display: block; }
+   #tabcheck2:checked ~ #tabcontent2 { display: block; }
+   #tabcheck3:checked ~ #tabcontent3 { display: block; }
+   #tabcheck4:checked ~ #tabcontent4 { display: block; }
+   /* ⇒追加 */
+
+   /* この上の項目を順番に追加していってください。 tabcheckとtabcontentは対応している数字に変更するようお願いします。*/

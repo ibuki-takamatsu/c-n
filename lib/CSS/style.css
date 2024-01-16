@@ -1,0 +1,228 @@
+    /*デフォルトのマウスカーソルを非表示にする*/
+    * {
+      cursor: none;
+    }
+
+    /*独自のマウスカーソルを作成*/
+    .cursor {
+      position: fixed;
+      top: -5px;
+      left: -5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(249, 154, 154, 0.7);
+      z-index: 1000;
+      transition: width 0.25s, height 0.25s, top 0.25s, left 0.25s;
+      transform: translate(0, 0);
+      pointer-events: none;
+      mix-blend-mode: difference;
+    }
+
+    /*aタグにホバーした時に見た目変化*/
+    .cursor.cursor--hover {
+      top: -14px;
+      left: -13px;
+      width: 30px;
+      height: 30px;
+      background: rgba(205, 114, 113, 0.5);
+    }
+
+    html{
+      background-image: url(../../img/bg.jpg);
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    body{
+      max-width: 1000px;
+      width: 100%;
+      background-color: #002C5925;
+    }
+
+    .top-container{
+      background-image: url(../../img/top.jpg);
+      width: 100%;
+      height: 100vh;
+      background-size: cover;
+      position: relative;
+    }
+
+    .top-cover{
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      animation-name: top-cover;
+      animation-delay: 0.5s;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-in;
+      animation-name: 0.3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes top-cover{
+
+      0%{
+        opacity: 0;
+      }
+
+      100%{
+        background-color: #00000030;
+        opacity: 1;
+      }
+
+    }
+
+    .page-title{
+      color: #ffffff;
+      opacity: 0;
+      animation-name: page-title;
+      animation-delay: 0.5s;
+      animation-duration: 0.7s;
+      animation-timing-function: ease-in-out;
+      animation-name: 0.3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes page-title{
+
+      0%{
+        opacity: 0;
+      }
+
+      100%{
+        transform: translate(0);
+        opacity: 1;
+      }
+
+    }
+
+    .corp-url{
+      color: #ffffff;
+      border: #ffffff solid 2px;
+      padding: 7px 10px 11px;
+      margin: 20px;
+      opacity: 0;
+      animation-name: corp-url;
+      animation-delay: 0.5s;
+      animation-duration: 0.7s;
+      animation-timing-function: ease-in-out;
+      animation-name: 0.3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      transition: 0.3s;
+    }
+
+    @keyframes corp-url{
+
+      0%{
+        opacity: 0;
+      }
+
+      100%{
+        transform: translate(0);
+        opacity: 1;
+      }
+
+    }
+
+    .corp-url:hover{
+      background-color: #ffffff;
+      color: black;
+    }
+
+    .tab{
+      display: inline-block;
+    }
+
+    .second-title{
+      color: #ffffff;
+      text-align: center;
+      padding-top: 25px;
+    }
+
+    .second-container{
+      background-color: #002C5940;
+      max-width: 100%;
+      height: 400px;
+      margin: 70px;
+      position: relative;
+    }
+    
+    .top-second-img{
+      position: absolute;
+      width: 400px;
+      vertical-align: bottom;
+      margin-top: 15px;
+      margin-left: 40px;
+    }
+
+    .second-text-box{
+      position: absolute;
+      max-width: 500px;
+      background-color: #ffffff;
+      padding: 20px;
+      bottom: 0;
+      right: 0;
+      margin-bottom: 40px;
+      margin-right: 40px;
+    }
+
+    .border-left{
+      border-left: #CEC72D 1px solid;
+      padding-left: 15px;
+      font-size: 14px;
+    }
+
+    .text-title{
+      padding-bottom: 10px;
+    }
+
+    .bold{
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .color{
+      color: #c9bf00;
+      font-weight: bold;
+    }
+
+       /* ▼タブ機能の掲載領域の装飾(※必須ではありません) */
+   .tabbox { margin: 0px 70px; padding-bottom: 70px; }
+   
+   /* ▼タブ機能を制御するラジオボタン(非表示にする) */
+   .tabbox input { display: none; }
+
+   /* ▼タブ(共通装飾＋非選択状態の装飾) */
+   .tab {
+      display: inline-block;
+      border-radius: 10px 10px 0px 0px;
+      padding: 10px 20px;
+      color: rgb(255, 255, 255);
+      background-color: #002C5935;
+   }
+
+   /* ▼チェックが入っているラジオボタンの隣にあるタブの装飾(＝選択状態のタブ) */
+   input:checked + .tab {
+      color: rgb(255, 255, 255);
+      background-color: #002C5950;
+      position: relative;
+      z-index: 10;
+   }
+
+   /* ▼タブの中身(共通装飾＋非選択状態の装飾) */
+   .tabcontent {
+      display: none;
+      padding: 20px;
+      position: relative;
+      z-index: 0;
+      background-color: #002C5950;
+   }
+
+    .t{
+      padding-bottom: 10px;
+      color: #fff200;
+    }
